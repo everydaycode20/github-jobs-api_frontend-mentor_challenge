@@ -1,0 +1,16 @@
+[dark-theme=false]{
+    --main-bg: #e7e3ec;
+}
+
+[dark-theme=true]{
+    --main-bg: #080b14;
+}
+
+.wrapper{
+    display: grid;
+    height: min-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    background-color: var(--main-bg);
+    height: 100vh;
+}

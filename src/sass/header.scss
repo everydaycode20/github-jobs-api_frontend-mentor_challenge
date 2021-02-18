@@ -1,0 +1,28 @@
+[dark-theme=false]{
+    --dark-mode-bg: #b088f9;
+}
+
+[dark-theme=true]{
+    --dark-mode-bg: black;
+}
+
+.top-container{
+    grid-row: 1;
+    background-color: #b088f9;
+    position: relative;
+}
+
+.top-container-dark{
+    grid-row: 1;
+    background-color: black;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5rem;
+}

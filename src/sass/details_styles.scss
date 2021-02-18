@@ -1,0 +1,235 @@
+[dark-theme=false]{
+    --main-bg: #e7e3ec;
+    --background-color: white;
+    --white-words: black;
+    --detail-letters: #484646;
+    --location-word: #3d00ae;
+}
+
+[dark-theme=true]{
+    --main-bg: #131722;
+    --background-color: #1f293b;
+    --white-words: white;
+    --detail-letters: #aaaaaa;
+    --location-word: #b088f9;;
+}
+
+pre{
+    white-space: pre-wrap;
+}
+
+.detail-container{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    background-color: var(--main-bg);
+    height: 100vh;
+}
+
+.top-container-h{
+    background-color: #b088f9;
+    grid-row: 1;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 2;
+    background-color: var(--main-bg);
+
+    .container-post{
+        width: 90%;
+        margin-top: -10px;
+        padding-bottom: 1rem;
+
+        .company{
+            background-color: var(--background-color);
+            padding: 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0.5rem;
+            position: relative;
+
+            .link_container{
+                position: absolute;
+                top: 1.25rem;
+                left: 15%;
+                transform: translate(-50%, -50%);
+            }
+
+            .back-arrow-container{
+                display: flex;
+                align-items: center;
+                color: var(--white-words);
+
+                p{
+                    margin-left: 5px;
+                    margin-bottom: 2px;
+                }
+            }
+
+            h3{
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                color: var(--white-words);
+            }
+
+            p{
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .company_url{
+                color: var(--detail-letters);
+                align-self: center;
+                text-align: center;
+            }
+            
+            .company_site_container{
+                background-color: #c1a1d3;
+                padding: 0.7rem;
+                display: flex;
+                flex-direction: row;
+                border-radius: 0.3rem;
+                cursor: pointer;
+
+                a{
+                    color: #4c2886;
+                }
+            }
+
+        }
+        
+        .job-description{
+            background-color: var(--background-color);
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 2rem;
+            
+            hyphens: auto;
+            .first_line{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: var(--detail-letters);
+                font-size: 0.9rem;
+                margin-top: 0.4rem;
+                margin-bottom: 0.4rem;
+                
+                .dot{
+                    background-color: #aaaaaa;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    border-radius: 50%;
+                    margin-left: 0.7rem;
+                    margin-right: 0.7rem;
+                }
+            }
+
+            .position{
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-top: 0.4rem;
+                margin-bottom: 0.4rem;
+                color: var(--white-words);
+            }
+
+            .location{
+                margin-top: 0.4rem;
+                margin-bottom: 0.4rem;
+                color: var(--location-word);
+            }
+
+            .job-description-text{
+                letter-spacing: 0.5px;
+                text-align: left;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                color: var(--white-words);
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                -ms-word-break: break-all;
+                word-break: break-all;
+                word-break: break-word;
+                -ms-hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                hyphens: auto;
+            }
+
+            .how-apply{
+                background-color: #b088f9;
+                color: white;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                word-break:break-all;
+                flex-wrap: wrap;
+                margin-top: 1.2rem;
+                
+                h3{
+                    margin-bottom: 1rem;
+                }
+
+                .apply{
+                    word-break:break-all;
+                }
+            }
+        }
+        
+    }
+}
+
+.loading_icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and(min-width:700px){
+
+    .main-container{
+        .container-post{
+            .company{
+                flex-direction: row;
+                justify-content: space-around;
+
+                .link_container{
+                    left: 7%;
+                }
+
+            }
+
+            .job-description{
+                .how-apply{
+                    margin-top: 1.2rem;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and(min-width:1000px){
+
+    .main-container{
+        .container-post{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and(min-width:1600px){
+
+    .main-container{
+        .container-post{
+            width: 40%;
+        }
+    }
+}
